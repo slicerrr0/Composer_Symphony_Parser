@@ -13,16 +13,16 @@ class ConditionalNode(BaseNode):
     with the conditional node.
     '''
     def __init__(self, parent=None|BaseNode) -> None:
-        super().__init__(parent)
+        super(ConditionalNode, self).__init__(parent)
 
 class FilterNode(BaseNode):
     def __init__(self, parent=None|BaseNode) -> None:
-        super().__init__(parent)
+        super(FilterNode, self).__init__(parent)
 
 class AssetNode(BaseNode):
     def __init__(self, parent=None|BaseNode) -> None:
-        super().__init__(parent)
+        super(AssetNode, self).__init__(parent)
 
 class WeightNode(BaseNode):
     def __init__(self, parent=None|BaseNode) -> None:
-        super().__init__(parent)
+        super(WeightNode, self).__init__(parent)
