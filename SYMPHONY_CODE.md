@@ -32,3 +32,8 @@ define the code that represents the algorithmic logic of a Symphony.
                     (select-top 1)
                     [(asset "TLT") (asset "SQQQ")])])])])])])])])])]))
 ```
+
+## Breakdown
+
+Python-like indentation is used to denote the flow of logic between conditional statements,
+and to express a hierarchical order.
