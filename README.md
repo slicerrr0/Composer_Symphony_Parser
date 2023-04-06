@@ -1,4 +1,4 @@
-# Composer_Symphony_Parser
+# Composer Symphony Parser
 
 # Usage
 
