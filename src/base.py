@@ -18,7 +18,7 @@ class BaseFile:
 
 class BaseNode:
     '''
-    Base class for reprsenting logic nodes in a Symphony's code.
+    Base class for representing logic nodes in a Symphony's code.
     '''
     def __init__(self, parent=None) -> None:
         if parent is not None and not isinstance(parent, BaseNode):
