@@ -7,4 +7,9 @@ class BaseParser:
     '''
     Base parser class. 
     '''
-    pass
+    def __init__(self, text: str) -> None:
+        self.text = text
+
+class Parser(BaseParser):
+    def __init__(self, text: str) -> None:
+        super(Parser, self).__init__(text)
