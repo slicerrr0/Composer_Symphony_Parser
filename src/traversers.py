@@ -16,13 +16,18 @@ class ConditionalNode(BaseNode):
         super(ConditionalNode, self).__init__(parent)
 
 class FilterNode(BaseNode):
-    def __init__(self, parent=None|BaseNode) -> None:
+    def __init__(self, indicator: str, amount: int, reverse=False, parent=None|BaseNode) -> None:
         super(FilterNode, self).__init__(parent)
+        self.indicator = indicator
+        self.amount = amount
+        self.reverse = reverse
 
 class AssetNode(BaseNode):
-    def __init__(self, parent=None|BaseNode) -> None:
+    def __init__(self, assets: list[str], parent=None|BaseNode) -> None:
         super(AssetNode, self).__init__(parent)
+        self.assets = assets
 
 class WeightNode(BaseNode):
-    def __init__(self, parent=None|BaseNode) -> None:
+    def __init__(self, weight: float, parent=None|BaseNode) -> None:
         super(WeightNode, self).__init__(parent)
+        self.weight = weight
