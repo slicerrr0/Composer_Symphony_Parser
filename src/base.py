@@ -36,7 +36,7 @@ class BaseNode:
     def __init__(self, parent=None) -> None:
         if parent is not None and not isinstance(parent, BaseNode):
             raise ValueError(f'''
-                Parmeter {parent} was of type {type(parent)}
+                Parmeter {parent} was of type {str(type(parent))}
                 Constructor method expected this paremter to be a
                 Node or a NoneType object.
             ''')
@@ -58,3 +58,4 @@ class BaseParser:
     '''
     def __init__(self, text: str) -> None:
         self.text = text
+    
