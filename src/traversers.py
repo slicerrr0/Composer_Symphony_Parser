@@ -8,7 +8,7 @@ from .base import BaseSymphony, BaseNode, BaseGroup
 ### Symphony classes
 class Symphony(BaseSymphony):
     def __init__(self, name: str, rebalance=None) -> None:
-        super().__init__(name, rebalance)
+        super(Symphony, self).__init__(name, rebalance)
 
 ### Group classes
 class Group(BaseGroup):
