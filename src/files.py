@@ -3,19 +3,9 @@ This module contains classes related to input
 and output files.
 '''
 
-class File:
-    '''
-    Base class used for interacting with files
-    of variosu type.
-    '''
-    def __init__(self, fname: str) -> None:
-        self.fname = fname
-        with open(fname) as f:
-            self.contents = f.read().strip()
-            f.close()
+from .base import BaseFile
 
-
-class InputFile(File):
+class InputFile(BaseFile):
     '''
     Input files contain the Symphony code that will
     be parsed and analyzed by the program.
@@ -24,7 +14,7 @@ class InputFile(File):
         super().__init__(fname)
 
 
-class OutputFile(File):
+class OutputFile(BaseFile):
     '''
     Output files are the destination of data or parsed
     code.
