@@ -18,6 +18,9 @@ class ConditionalNode(BaseNode):
         super(ConditionalNode, self).__init__(parent)
 
 class FilterNode(BaseNode):
+    '''
+    Filter nodes sort 
+    '''
     def __init__(self, indicator: str, amount: int, reverse=False, parent=None|BaseNode) -> None:
         super(FilterNode, self).__init__(parent)
         self.indicator = indicator
@@ -38,4 +41,4 @@ class WeightNode(BaseNode):
 ### Group classes
 class Group(BaseGroup):
     def __init__(self, name: str) -> None:
-        super().__init__(name)
+        super(BaseGroup, self).__init__(name)
