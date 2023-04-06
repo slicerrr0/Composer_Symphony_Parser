@@ -11,7 +11,7 @@ class InputFile(BaseFile):
     be parsed and analyzed by the program.
     '''
     def __init__(self, fname: str) -> None:
-        super().__init__(fname)
+        super(InputFile, self).__init__(fname)
 
 
 class OutputFile(BaseFile):
