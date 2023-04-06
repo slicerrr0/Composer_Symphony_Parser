@@ -29,6 +29,16 @@ class BaseNode:
             ''')
         self.parent = parent
 
+
+class BaseGroup:
+    '''
+    Base class representing "groups" within a Symphony's code.
+    "Groups" are titled portions of a Symphony containing descendent
+    Nodes.
+    '''
+    def __init__(self, name: str) -> None:
+        self.name = name
+
 class BaseParser:
     '''
     Base parser class. 

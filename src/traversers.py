@@ -3,8 +3,10 @@ This module contains classes used to represent the hierarchical
 structure of a Symphony's code.
 '''
 
-from .base import BaseNode
+from .base import BaseNode, BaseGroup
 
+
+### Node classes
 class ConditionalNode(BaseNode):
     '''
     Conditional nodes function as switches between multiple
@@ -31,3 +33,9 @@ class WeightNode(BaseNode):
     def __init__(self, weight: float, parent=None|BaseNode) -> None:
         super(WeightNode, self).__init__(parent)
         self.weight = weight
+
+
+### Group classes
+class Group(BaseGroup):
+    def __init__(self, name: str) -> None:
+        super().__init__(name)
