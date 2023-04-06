@@ -3,8 +3,12 @@ This module contains classes used to represent the hierarchical
 structure of a Symphony's code.
 '''
 
-from .base import BaseNode, BaseGroup
+from .base import BaseSymphony, BaseNode, BaseGroup
 
+### Symphony classes
+class Symphony(BaseSymphony):
+    def __init__(self, name: str, rebalance=None) -> None:
+        super().__init__(name, rebalance)
 
 ### Node classes
 class ConditionalNode(BaseNode):

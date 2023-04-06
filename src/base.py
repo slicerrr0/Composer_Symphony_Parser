@@ -16,6 +16,19 @@ class BaseFile:
             f.close()
 
 
+class BaseSymphony:
+    '''
+    Base class for representing Symphony algorithms.
+    '''
+    def __init__(self, name: str, rebalance=None) -> None:
+        self.name = name
+        if rebalance is not None and type(rebalance) != float:
+            raise ValueError(f'''
+                Parameter {rebalance} was of type {str(type(rebalance))}.
+                This parameter must be a float or a NoneType object.
+            ''')
+        self.rebalance = rebalance
+
 class BaseNode:
     '''
     Base class for representing logic nodes in a Symphony's code.
