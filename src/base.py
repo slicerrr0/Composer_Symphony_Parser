@@ -64,7 +64,8 @@ class BaseParser:
         self.REBALANCE_PATTERN = r'(?<={:rebalance-threshold )[^}]+'
         
         self.BASE_NODE_PATTERN = ''
-        self.CONDITIONAL_NODE_PATTERN = ''
+        self.CONDITIONAL_NODE_PATTERN_VARIABLE = ''
+        self.CONDITIONAL_NODE_PATTERN_CONSTANT = ''
         self.FILTER_NODE_PATTERN = ''
         self.ASSET_NODE_PATTERN = ''
         self.WEIGHT_NODE_PATTERN = ''
