@@ -60,15 +60,20 @@ class BaseParser:
     '''
     def __init__(self, text: str) -> None:
         self.text = text
-        # Regex patterns
-        self.NODE_PATTERN = ''
-        self.REBLANCE_PATTERN = r'(?<={:rebalance-threshold )[^}]+'
+        # Regular expression patterns
+        self.REBALANCE_PATTERN = r'(?<={:rebalance-threshold )[^}]+'
+        
+        self.BASE_NODE_PATTERN = ''
+        self.CONDITIONAL_NODE_PATTERN = ''
+        self.FILTER_NODE_PATTERN = ''
+        self.ASSET_NODE_PATTERN = ''
+        self.WEIGHT_NODE_PATTERN = ''
     def parse_rebalance_threshold(self) -> float:
         '''
         Parses `self.text` for a match to `self.REBALANCE_PATTERN`. This 
         match corresponds to the rebalance threshold set for the Symphony.
         '''
-        return float(re.search(self.REBLANCE_PATTERN, self.text).group(0))
+        return float(re.search(self.REBALANCE_PATTERN, self.text).group(0))
     def parse_weight_node(self) -> WeightNode:
         return
     def parse_conditional_node(self, node: str) -> ConditionalNode:
