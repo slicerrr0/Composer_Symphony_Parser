@@ -60,6 +60,8 @@ class BaseParser:
     '''
     def __init__(self, text: str) -> None:
         self.text = text
+        # Regex patterns
+        self.NODE_PATTERN = ''
         self.REBLANCE_PATTERN = r'(?<={:rebalance-threshold )[^}]+'
     def parse_rebalance_threshold(self) -> float:
         '''
@@ -71,3 +73,10 @@ class BaseParser:
         return
     def parse_conditional_node(self, node: str) -> ConditionalNode:
         return
+    def parse_all_nodes(self) -> list[str]:
+        '''
+        Parses `self.text` for all distinct logic Nodes
+        within the Symphony using the regex pattern specified
+        in `self.NODE_PATTERN`.
+        '''
+        return re.findall(self.NODE_PATTERN, self.text)
