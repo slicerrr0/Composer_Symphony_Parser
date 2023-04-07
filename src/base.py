@@ -4,6 +4,7 @@ types used throughout the program.
 '''
 
 import re
+from .traversers import ConditionalNode
 
 class BaseFile:
     '''
@@ -66,4 +67,5 @@ class BaseParser:
         match corresponds to the rebalance threshold set for the Symphony.
         '''
         return float(re.search(self.REBLANCE_PATTERN, self.text).group(0))
-    def parse_conditional_node(self)
+    def parse_conditional_node(self, node: str) -> ConditionalNode:
+        return ConditionalNode()
