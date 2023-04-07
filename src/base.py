@@ -59,11 +59,5 @@ class BaseParser:
     '''
     def __init__(self, text: str) -> None:
         self.text = text
-        self.NODE_PATTERN = ""
-    def parse_nodes(self) -> list[str]:
-        '''
-        Parses `self.text` and returns all Node structures that
-        match the pattern defined in `self.NODE_PATTERN`.
-        '''
-        return re.findall(self.NODE_PATTERN, self.text)
+
     
